@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_dld_date"
+        android:text="date"
+        android:drawableLeft="@drawable/ic_today_black_18dp"
+        android:drawableTint="@color/colorTextSecondary"
+        android:drawablePadding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_dld_content"
+        android:text="content"
+        android:textColor="@color/md_black_1000"
+        android:drawableLeft="@drawable/ic_location_on_black_18dp"
+        android:drawablePadding="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_dld_call"
+            android:text="전화"
+            android:textColor="@color/md_white_1000"
+            android:drawableLeft="@drawable/ic_phone_white_24dp"
+            android:backgroundTint="@color/colorBtnGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_dld_map"
+            android:text="지도"
+            android:textColor="@color/md_white_1000"
+            android:drawableLeft="@drawable/ic_location_on_white_24dp"
+            android:backgroundTint="@color/colorBtnBlue"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_dld_del"
+            android:text="삭제"
+            android:textColor="@color/md_white_1000"
+            android:drawableLeft="@drawable/ic_delete_forever_white_24dp"
+            android:backgroundTint="@color/colorBtnRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

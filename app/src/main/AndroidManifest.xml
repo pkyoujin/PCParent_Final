@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pknu.pcparent">
+
+    <!-- SMS -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <!-- SQLite Database -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 포그라운드 전환 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <!-- 전화 걸기 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!--&lt;!&ndash; GPS &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/teddy"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+
+
+        <!-- Google Maps API KEY (JYH Notebook) -->
+        <!--<meta-data-->
+            <!--android:name="com.google.android.geo.API_KEY"-->
+            <!--android:value="AIzaSyBiaLteIz1c-rWUoie7G3ZLkSbB3SY_obI" />-->
+        <!--F3:7A:E1:75:71:E5:E2:6E:C0:83:46:02:A7:44:69:18:04:54:32:26-->
+
+        <!-- Google Maps API KEY (JYH PC) -->
+        <!--<meta-data-->
+            <!--android:name="com.google.android.geo.API_KEY"-->
+            <!--android:value="AIzaSyABf3Tg1Qvd3CC56itWNYmuLpDHtDUxsTo" />-->
+        <!--E8:24:3F:D8:34:2D:E4:4E:05:32:FE:9E:1B:22:E2:9D:5A:AD:D9:BE-->
+
+        <!-- Google Maps API KEY (You Jin) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBdbxReKS8V7jp2T5bA9y74eHvbRDTxprM" />
+        <!--04:00:CF:B6:55:17:98:09:ED:D8:36:9B:95:AB:48:EC:51:7B:A7:08-->
+
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.MapActivity" />
+
+        <receiver android:name=".service.SMSReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

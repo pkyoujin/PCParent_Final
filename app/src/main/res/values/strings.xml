@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PCParent</string>
+    <string name="list_sms_msg">위험 메시지를 수신했습니다.</string>
+</resources>
